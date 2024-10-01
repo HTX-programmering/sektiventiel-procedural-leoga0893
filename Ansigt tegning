@@ -1,0 +1,97 @@
+void setup(){
+  size(600,600);
+}
+
+void draw(){
+  head();
+  eyes();
+  nose();
+  mouth();
+  hat();
+}
+
+void head(){
+  //tegner hovedet med farve
+  fill(#DFF002);
+  circle(295,340,400);
+  fill(255);
+}
+
+void eyes(){  
+  //tegner øjnere
+square(170,240,100);
+square(320,240,100);
+}
+
+void nose(){
+  //tegner nasen
+  circle(295,365,125);
+}
+  
+void mouth(){
+  // tegner mund
+  arc(295,440,225,150,0,PI,CHORD);
+}
+
+void hat(){
+  //tegner sort hat
+  arc(295,440,225,150,0,PI,CHORD);
+fill(0);
+rect(120,160,350,25,28);
+rect(175,10,240,150);
+fill(255);
+}
+
+//MED PARAMETER OPGAVE 5.4
+void setup() {
+  size(1000, 600);
+}
+
+void draw() {
+  figure();
+}
+
+void figure() {
+  head(295, 340);
+  head(695, 340);
+  eyes(170, 240);
+  eyes(570, 240);
+  nose(295, 365);
+  nose(695,365);
+  mouth(295,440);
+  mouth(695,440);
+  hat(120,160);
+  hat(520,160);
+}
+
+void head(float x, float y) {
+  //tegner hovedet med farve
+  fill(#DFF002);
+  circle(x, y, 400);
+  fill(255);
+}
+
+void eyes(float x, float y) {
+  //tegner øjnere
+  square(x, y, 100);
+  square(x+150, y, 100);
+}
+
+void nose(float x, float y) {
+  //tegner nasen
+  circle(x, y, 125);
+}
+
+void mouth(float x, float y) {
+  // tegner mund
+  arc(x, y, 225, 150, 0, PI, CHORD);
+}
+
+void hat(float x, float y) {
+  //tegner sort hat
+  arc(x+175, y+280, 440, 225, 150, PI, CHORD);
+  fill(0);
+  rect(x, y, 350, 25, 28);
+  rect(x+55, y-150, 240, 150);
+  fill(255);
+}
